@@ -163,7 +163,7 @@ module.exports = {
         name: req.body.name,
         description: req.body.description,
         email: req.body.email,
-        ingredient: req.body.ingredient,
+        ingredients: req.body.ingredients,
         category: req.body.category,
         image: newImageName,
       });
@@ -175,7 +175,20 @@ module.exports = {
       res.redirect("/submit-recipe");
     }
   },
+
+  aboutUs: async (req, res) =>{
+    res.render('about-us')
+  },
+
+  contactUs: async (req, res) =>{
+    res.render('contact-us')
+  }
 };
+
+
+
+
+//TO INSERT DOMMY DB INTO UR MONGODB B/4 USING THE DB
 
 // async function insertDymmyRecipeData() {
 //   try {
